@@ -4,15 +4,11 @@
 
 build
 ------
-docker build -t wombach/docker-reverse-proxy:1.0.9.4 .
-docker images
-docker login --username=wombach
-docker push wombach/docker-reverse-proxy:1.0.9.4
-
-run
-docker run -dit -p 8080:80 reverse_proxy
-
-connect with web browser to http://127.0.0.1:8080/
+```
+docker build -t wombach/docker-reverse-proxy:1.0.9.5 .
+docker login
+docker push wombach/docker-reverse-proxy:1.0.9.5
+```
 
 The docker container can consume a enviornment variable NAMESPACE.
 The script /usr/local/apache2/init/init_index_html.sh uses this variable to set the base url of the index.html and prefixes the value of the variable to /atlas/
